@@ -56,10 +56,18 @@ public class Operations {
     }
 
     public static void deleteAfterNodeAfterSearchNode() {
-        System.out.println("Before");
+        System.out.println("Before deleting the node");
         LinkedList linkedList = insertAfterSearchNode();
-        System.out.println("after");
+        System.out.println("after deleting the node");
         linkedList.deleteANode(40);
+        linkedList.print();
+    }
+
+    public static void sortList() {
+        System.out.println("before sorting the list");
+        LinkedList linkedList = insertAfterSearchNode();
+        linkedList.sort();
+        System.out.println("after sorting the list");
         linkedList.print();
     }
 }
