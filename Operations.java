@@ -6,7 +6,6 @@ public class Operations {
         linkedList.push(70);
         linkedList.push(30);
         linkedList.push(56);
-        linkedList.print();
         return linkedList;
     }
 
@@ -43,17 +42,24 @@ public class Operations {
         linkedList.print();
     }
 
-    public static LinkedList findNodeBasedOnValue() {
+    public static void findNodeBasedOnValue() {
         LinkedList linkedList = addDataAtStart();
         linkedList.searchNode(30);
+    }
+
+    public static LinkedList insertAfterSearchNode() {
+        LinkedList linkedList = addDataAtStart();
+        Node newNode = new Node(40);
+        Node previousNode = linkedList.searchNodeAt(30, newNode);
+        linkedList.print();
         return linkedList;
     }
 
-    public static void insertAfterSearchNode() {
-        LinkedList linkedList= addDataAtStart();
-        Node newNode = new Node(40);
-        linkedList.searchNodeAt(30, newNode);
-        System.out.println("After");
+    public static void deleteAfterNodeAfterSearchNode() {
+        System.out.println("Before");
+        LinkedList linkedList = insertAfterSearchNode();
+        System.out.println("after");
+        linkedList.deleteANode(40);
         linkedList.print();
     }
 }
