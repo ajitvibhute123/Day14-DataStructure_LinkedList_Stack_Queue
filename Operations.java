@@ -7,7 +7,14 @@ public class Operations {
         linkedList.push(30);
         linkedList.push(56);
         linkedList.print();
-
-
     }
+
+    public static void addDataAtEnd() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.append(56);
+        linkedList.append(30);
+        linkedList.append(70);
+        linkedList.print();
+    }
+
 }
