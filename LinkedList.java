@@ -13,8 +13,7 @@ public class LinkedList {
             Node temp = head;
             this.head = newNode;
             newNode.next = temp;
-        }
-        return newNode;
+        }return newNode;
     }
 
     public void print() {
@@ -23,9 +22,12 @@ public class LinkedList {
         } else {
             Node temp = head;
             while (temp != null) {
-                System.out.print(temp.data + " ->");
+                if(temp.next != null)
+                    System.out. print(temp.data + " -> ");
+                else System.out.println(temp.data);
                 temp = temp.next;
             }
+
         }
     }
 
@@ -39,11 +41,13 @@ public class LinkedList {
             tail = newNode;
         }
     }
-
-    public void insertInBetween(Node previousNode, Node newNode) {
+    public void insertInBetween(Node previousNode ,Node newNode){
         Node tempNode = previousNode.next;
         previousNode.next = newNode;
         newNode.next = tempNode;
     }
 
+    public void pop() {
+        this.head = this.head.next;
+    }
 }
